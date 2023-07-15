@@ -8,7 +8,7 @@
 
 ## Description
 
-This is a Node.js project that I am using to learn Node.js.
+This is a Next.js project that I am using to learn Next.js.
 
 ## Dependencies
 
