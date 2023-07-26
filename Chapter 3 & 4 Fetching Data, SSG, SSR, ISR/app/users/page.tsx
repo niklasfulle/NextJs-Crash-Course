@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default async function UsersPage() {
   const usersData: Promise<User[]> = getAllUsers();
 
-  const users = await usersData;
+  const users: User[] = await usersData;
 
   //console.log('Hello') // Did you find where this appears?
 
