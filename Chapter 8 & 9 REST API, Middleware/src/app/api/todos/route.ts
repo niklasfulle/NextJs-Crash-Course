@@ -4,12 +4,19 @@ const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos";
 
 const API_KEY: string = process.env.DATA_API_KEY as string;
 
-export async function GET() {
-  const res = await fetch(DATA_SOURCE_URL);
+export async function GET(request: Request) {
+  const origin = request.headers.get('origin')
 
-  const todos: Todo[] = await res.json();
+  const res = await fetch(DATA_SOURCE_URL)
 
-  return NextResponse.json(todos);
+  const todos: Todo[] = await res.json()
+
+  return new NextResponse(JSON.stringify(todos), {
+    headers: {
+      'Access-Control-Allow-Origin': origin || "*",
+      'Content-Type': 'application/json',
+    }
+  })
 }
 
 export async function POST(request: Request) {
