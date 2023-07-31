@@ -18,3 +18,4 @@ This is a Next.js project that I am using to learn Next.js.
 | React        | 18.2.0  | [Link](https://reactjs.org/)            |
 | Tailwind CSS | 3.2.7   | [Link](https://tailwindcss.com/)        |
 | Next         | 13.4.0  | [Link](https://nextjs.org/)             |
+| next-auth    | 4.22.3  | [Link](https://next-auth.js.org/)       |
