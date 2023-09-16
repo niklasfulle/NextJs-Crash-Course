@@ -16,7 +16,6 @@ export async function POST(request: NextRequest) {
   // For this, we'll just write it to the filesystem in a new location
   const path = `${process.cwd()}/public/images/${file.name}`;
   await writeFile(path, buffer);
-  console.log(`open ${path} to see the uploaded file`);
 
   return NextResponse.json({ success: true });
 }
